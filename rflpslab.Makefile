@@ -28,20 +28,6 @@ include $(E3_REQUIRE_TOOLS)/driver.makefile
 include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 
 
-
-# If one would like to use the module dependency restrictly,
-# one should look at other modules makefile to add more
-# In most case, one should ignore the following lines:
-
-#ifneq ($(strip $(ASYN_DEP_VERSION)),)
-#asyn_VERSION=$(ASYN_DEP_VERSION)
-#endif
-
-#ifneq ($(strip $(SEQUENCER_DEP_VERSION)),)
-#sequencer_VERSION=$(SEQUENCER_DEP_VERSION)
-#endif
-
-
 EXCLUDE_ARCHS = linux-ppc64e6500
 EXCLUDE_ARCHS += linux-corei7-poky
 
