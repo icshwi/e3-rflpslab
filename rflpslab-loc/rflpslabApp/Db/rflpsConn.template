@@ -1,0 +1,7 @@
+record(bi, "$(PREFIX):$(SGNL)-CONN") {
+        field(DTYP, "S7plc stat")
+  	field(INP,  "@$(PLC)")
+  	field(SCAN, "I/O Intr")
+	field(ZNAM, "Not connected")
+	field(ONAM, "Connected")
+}

@@ -1,0 +1,53 @@
+record(bi, "$(PREFIX):$(SGNL)-LOCREM-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+        field(ZNAM, "LOCAL")
+        field(ONAM, "REMOTE")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ON-STAT-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-FAULT-STAT-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+        field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-ON-CMD-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+        field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-RESET-CMD-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
+        field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-CLOOP-ENA-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
+        field(ZNAM, "PSU-OFF")
+        field(ONAM, "PSU-ON")
+}

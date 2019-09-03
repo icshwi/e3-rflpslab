@@ -1,0 +1,25 @@
+global {PLC=PLCPSU}
+
+file "rflpsConn.template"
+{
+	pattern {SGNL}
+		{PSU}
+}
+
+file "rflpsFILR.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{FILAMENT,	0, 	2}
+}
+
+file "rflpsFILW.template"
+{
+	pattern {SGNL, SOFF, PREC}
+		{FILAMENT,	0, 	2} 
+}
+
+file "rflpsFILInternal.template"
+{
+	pattern {SGNL}
+		{FILAMENT}
+}

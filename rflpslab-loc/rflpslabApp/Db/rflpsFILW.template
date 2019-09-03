@@ -1,0 +1,29 @@
+record(bo, "$(PREFIX):$(SGNL)-LOCREM")
+{
+        field(DTYP, "S7plc")   
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+        field(DISP, "1")
+        field(ZNAM, "LOCAL")
+        field(ONAM, "REMOTE")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-ON-STAT")
+{
+        field(DTYP, "S7plc")
+        field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+        field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-FAULT-STAT")
+{
+        field(DTYP, "S7plc")
+        field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+        field(DISP, "1")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-CLOOP-ENA")
+{
+        field(DTYP, "S7plc")
+        field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+        field(DISP, "1")
+}
