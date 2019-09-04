@@ -1,7 +1,7 @@
 record(bo, "$(PREFIX):$(SGNL)-LOCREM")
 {
         field(DTYP, "S7plc")   
-	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT16 B=0" )
         field(DISP, "1")
         field(ZNAM, "LOCAL")
         field(ONAM, "REMOTE")

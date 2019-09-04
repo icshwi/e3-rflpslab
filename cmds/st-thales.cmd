@@ -27,7 +27,7 @@ epicsEnvSet("PLCIP", "$(RFLPS_IP=172.30.4.221)")
 #epicsEnvSet("INSIZEDIO", "408")
 #epicsEnvSet("OUTSIZEDIO", "68")
 
-epicsEnvSet("TCPPORTPSU", "3000")
+epicsEnvSet("TCPPORTPSU", "3003")
 epicsEnvSet("PLCPORTPSU", "PLCPSU")
 epicsEnvSet("INSIZEPSU", "14")
 epicsEnvSet("OUTSIZEPSU", "10")
