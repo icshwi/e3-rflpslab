@@ -1,0 +1,33 @@
+record(bo, "$(PREFIX):$(SGNL)-CLOOP-ENA")
+{
+        field(DTYP, "S7plc")
+        field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
+        field(DISP, "1")
+        field(ZNAM, "SET CLOSE LOOP")
+        field(ONAM, "SET OPEN LOOP")
+}
+
+record(bo, "$(PREFIX):$(SGNL)-PS-OK")
+{
+        field(DTYP, "S7plc")   
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+        field(DISP, "1")
+        field(ZNAM, "SET OK")
+        field(ONAM, "SET ERROR")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-IMON-OUT") {
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(EGU, "A")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-VMON-OUT") {
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(EGU, "V")
+}

@@ -9,7 +9,7 @@ epicsEnvSet("TOP", "$(E3_CMD_TOP)/..")
 epicsEnvSet("PREFIX", "$(RFLPS_PREFIX=BENCH:RFS01)")
 epicsEnvSet("PLCIP", "$(RFLPS_IP=172.30.4.221)")
 
-#var s7plcDebug 5
+#var s7plcDebug 1
 
 ## Datablocks
 #epicsEnvSet("TCPPORTCPU", "3000")
@@ -29,8 +29,8 @@ epicsEnvSet("PLCIP", "$(RFLPS_IP=172.30.4.221)")
 
 epicsEnvSet("TCPPORTPSU", "3003")
 epicsEnvSet("PLCPORTPSU", "PLCPSU")
-epicsEnvSet("INSIZEPSU", "14")
-epicsEnvSet("OUTSIZEPSU", "10")
+epicsEnvSet("INSIZEPSU", "28")
+epicsEnvSet("OUTSIZEPSU", "20")
 
 #s7plcConfigure("$(PLCPORTCPU)","$(PLCIP)",$(TCPPORTCPU),$(INSIZECPU),$(OUTSIZECPU),1,2500,500)
 #s7plcConfigure("$(PLCPORTAF)","$(PLCIP)",$(TCPPORTAF),$(INSIZEAF),$(OUTSIZEAF),1,2500,500)

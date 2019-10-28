@@ -7,4 +7,63 @@ record(seq, "$(PREFIX):$(SGNL)-LOCREM-INT")
 	field(LNK2, "$(PREFIX):$(SGNL)-LOCREM.DISP")
 	field(LNK1, "$(PREFIX):$(SGNL)-LOCREM PP")
 	field(LNK3, "$(PREFIX):$(SGNL)-LOCREM-INT.DISA")
+
+#	field(PINI, "1")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-ON-STAT-INT")
+{
+        field(DO2,  "0")
+        field(DOL1, "$(PREFIX):$(SGNL)-ON-STAT-RB")
+        field(DO3,  "1")
+
+        field(LNK2, "$(PREFIX):$(SGNL)-ON-STAT.DISP")
+        field(LNK1, "$(PREFIX):$(SGNL)-ON-STAT PP")
+        field(LNK3, "$(PREFIX):$(SGNL)-ON-STAT-INT.DISA")
+
+#        field(PINI, "1")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-FAULT-STAT-INT")
+{
+        field(DO2,  "0")
+        field(DOL1, "$(PREFIX):$(SGNL)-FAULT-STAT-RB")
+        field(DO3,  "1")
+
+        field(LNK2, "$(PREFIX):$(SGNL)-FAULT-STAT.DISP")
+        field(LNK1, "$(PREFIX):$(SGNL)-FAULT-STAT PP")
+        field(LNK3, "$(PREFIX):$(SGNL)-FAULT-STAT-INT.DISA")
+
+#        field(PINI, "1")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-CLOOP-ENA-INT")
+{
+        field(DO2,  "0")
+        field(DOL1, "$(PREFIX):$(SGNL)-CLOOP-ENA-RB")
+        field(DO3,  "1")
+
+        field(LNK2, "$(PREFIX):$(SGNL)-CLOOP-ENA.DISP")
+        field(LNK1, "$(PREFIX):$(SGNL)-CLOOP-ENA PP")
+        field(LNK3, "$(PREFIX):$(SGNL)-CLOOP-ENA-INT.DISA")
+
+#	field(PINI, "1")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-IMON-OUT-INT") {
+	field(DO2, "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-IMON-OUT-RB")
+	field(DO3, "1")
+	field(LNK2, "$(PREFIX):$(SGNL)-IMON-OUT.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-IMON-OUT PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-IMON-OUT-INT.DISA")
+}
+
+record(seq, "$(PREFIX):$(SGNL)-WMON-OUT-INT") {
+	field(DO2, "0")
+	field(DOL1, "$(PREFIX):$(SGNL)-WMON-OUT-RB")
+	field(DO3, "1")
+	field(LNK2, "$(PREFIX):$(SGNL)-WMON-OUT.DISP")
+	field(LNK1, "$(PREFIX):$(SGNL)-WMON-OUT PP")
+	field(LNK3, "$(PREFIX):$(SGNL)-WMON-OUT-INT.DISA")
 }

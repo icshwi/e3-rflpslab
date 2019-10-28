@@ -1,60 +1,51 @@
-record(bi, "$(PREFIX):$(SGNL)-LOCREM-RB")
-{
-        field(DTYP, "S7plc")
-        field(SCAN, "I/O Intr")
-        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
-        field(ZNAM, "LOCAL")
-        field(ONAM, "REMOTE")
-	field(FLNK, "$(PREFIX):$(SGNL)-LOCREM-INT")
-}
-
-record(bi, "$(PREFIX):$(SGNL)-ON-STAT-RB")
-{
-	field(DTYP, "S7plc")
-	field(SCAN, "I/O Intr")
-	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
-	field(ZNAM, "PSU-OFF")
-        field(ONAM, "PSU-ON")
-	field(FLNK, "$(PREFIX):$(SGNL)-ON-STAT-INT")
-}
-
-record(bi, "$(PREFIX):$(SGNL)-FAULT-STAT-RB")
-{
-        field(DTYP, "S7plc")
-        field(SCAN, "I/O Intr")
-        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
-        field(ZNAM, "PSU-FAULT")
-        field(ONAM, "PSU-OK")
-	field(FLNK, "$(PREFIX):$(SGNL)-FAULT-STAT-INT")
-}
-
-record(bi, "$(PREFIX):$(SGNL)-ON-CMD-RB")
-{
-        field(DTYP, "S7plc")
-        field(SCAN, "I/O Intr")
-        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
-        field(ZNAM, "PSU-OFF")
-        field(ONAM, "PSU-ON")
-}
-
-record(bi, "$(PREFIX):$(SGNL)-RESET-CMD-RB")
-{
-        field(DTYP, "S7plc")
-        field(SCAN, "I/O Intr")
-        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
-        field(ZNAM, "PSU-OFF")
-        field(ONAM, "PSU-ON")
-}
-
 record(bi, "$(PREFIX):$(SGNL)-CLOOP-ENA-RB")
 {
         field(DTYP, "S7plc")
         field(SCAN, "I/O Intr")
-        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=5" )
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
         field(ZNAM, "PSU-OFF")
         field(ONAM, "PSU-ON")
-	field(FLNK, "$(PREFIX):$(SGNL)-CLOOP-ENA-INT")
+        field(FLNK, "$(PREFIX):$(SGNL)-CLOOP-ENA-INT")
 }
+
+record(bi, "$(PREFIX):$(SGNL)-ENA-IN-RB")
+{
+	field(DTYP, "S7plc")
+	field(SCAN, "I/O Intr")
+	field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
+	field(ZNAM, "ENA-OFF")
+        field(ONAM, "ENA-ON")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-SO-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
+        field(ZNAM, "SO-DIS")
+        field(ONAM, "SO-ENA")
+	#field(FLNK, "$(PREFIX):$(SGNL)-FAULT-STAT-INT")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-PS-OK-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
+        field(ZNAM, "PSU-ERROR")
+        field(ONAM, "PSU-OK")
+	field(FLNK, "$(PREFIX):$(SGNL)-PS-OK-INT")
+}
+
+record(bi, "$(PREFIX):$(SGNL)-LOCREM-RB")
+{
+        field(DTYP, "S7plc")
+        field(SCAN, "I/O Intr")
+        field(INP, "@$(PLC)/$(SOFF)+0 T=INT8 B=4" )
+        field(ZNAM, "LOCAL")
+        field(ONAM, "REMOTE")
+}
+
 
 record(ai, "$(PREFIX):$(SGNL)-IMON-OUT-RB") {
 	field(DTYP, "S7plc")
@@ -66,17 +57,17 @@ record(ai, "$(PREFIX):$(SGNL)-IMON-OUT-RB") {
 	field(FLNK, "$(PREFIX):$(SGNL)-IMON-OUT-INT")
 }
 
-record(ai, "$(PREFIX):$(SGNL)-WMON-OUT-RB") {
+record(ai, "$(PREFIX):$(SGNL)-VMON-OUT-RB") {
 	field(DTYP, "S7plc")
 	field(SCAN, "I/O Intr")
 	field(INP, "@$(PLC)/$(SOFF)+6 T=REAL32" )
 	field(MDEL, "-1")
-	field(EGU, "W")
+	field(EGU, "V")
 	field(PREC, "$(PREC)")
-	field(FLNK, "$(PREFIX):$(SGNL)-WMON-OUT-INT")
+	field(FLNK, "$(PREFIX):$(SGNL)-VMON-OUT-INT")
 }
 
-record(ai, "$(PREFIX):$(SGNL)-ISET-RB") {
+record(ai, "$(PREFIX):$(SGNL)-IPGM-RB") {
         field(DTYP, "S7plc")
         field(SCAN, "I/O Intr")
         field(INP, "@$(PLC)/$(SOFF)+10 T=REAL32" )

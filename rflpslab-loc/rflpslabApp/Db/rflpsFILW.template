@@ -1,10 +1,10 @@
 record(bo, "$(PREFIX):$(SGNL)-LOCREM")
 {
         field(DTYP, "S7plc")   
-	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT16 B=0" )
+	field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=0" )
         field(DISP, "1")
-        field(ZNAM, "LOCAL")
-        field(ONAM, "REMOTE")
+        field(ZNAM, "SET LOCAL")
+        field(ONAM, "SET REMOTE")
 }
 
 record(bo, "$(PREFIX):$(SGNL)-ON-STAT")
@@ -12,6 +12,8 @@ record(bo, "$(PREFIX):$(SGNL)-ON-STAT")
         field(DTYP, "S7plc")
         field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=1" )
         field(DISP, "1")
+	field(ZNAM, "SET ON")
+        field(ONAM, "SET OFF")
 }
 
 record(bo, "$(PREFIX):$(SGNL)-FAULT-STAT")
@@ -19,6 +21,8 @@ record(bo, "$(PREFIX):$(SGNL)-FAULT-STAT")
         field(DTYP, "S7plc")
         field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=2" )
         field(DISP, "1")
+	field(ZNAM, "SET FAULT OK")
+        field(ONAM, "SET FAULT")
 }
 
 record(bo, "$(PREFIX):$(SGNL)-CLOOP-ENA")
@@ -26,4 +30,22 @@ record(bo, "$(PREFIX):$(SGNL)-CLOOP-ENA")
         field(DTYP, "S7plc")
         field(OUT, "@$(PLC)/$(SOFF)+0 T=INT8 B=3" )
         field(DISP, "1")
+	field(ZNAM, "SET CLOSE LOOP")
+        field(ONAM, "SET OPEN LOOP")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-IMON-OUT") {
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+2 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(EGU, "A")
+}
+
+record(ao, "$(PREFIX):$(SGNL)-WMON-OUT") {
+	field(DTYP, "S7plc")
+	field(OUT, "@$(PLC)/$(SOFF)+6 T=REAL32" )
+	field(DISP, "1")
+	field(PREC, "2")
+	field(EGU, "W")
 }
